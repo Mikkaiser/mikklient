@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mikklient.MainPage">
+    <FlexLayout 
+        Direction="Column"
+        AlignItems="Center" 
+        JustifyContent="Center"
+        MinimumWidthRequest="400">
+            <!--<Border MinimumWidthRequest="600" Stroke="AliceBlue" StrokeThickness="2">-->
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Picker SelectedIndex="0" ItemsSource="{Binding HttpVerbs}" WidthRequest="110"/>
+                        <Entry Placeholder="https://api.mikkaiser.example/" HorizontalOptions="FillAndExpand"/>
+                        <Button
+                            Text="Send"
+                            CornerRadius="0"
+                            FontAttributes="Bold"
+                            WidthRequest="90"
+                            />
+                </StackLayout>
+                    <StackLayout Padding="0, 20, 0, 0">
+                    <Editor Text="{Binding InitialEditorText}" 
+                                TextColor="AliceBlue" 
+                                IsReadOnly="True"
+                                HeightRequest="200"
+                                />
+                    </StackLayout>
+                </StackLayout>
+            <!--</Border>-->
+    </FlexLayout>
+</ContentPage>
